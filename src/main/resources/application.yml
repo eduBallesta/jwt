@@ -1,0 +1,17 @@
+server:
+  port: 8085
+  error:
+    include-stacktrace: never
+jms:
+  jwt:
+    security:
+      enabled: true
+    timezone: "America/Bogota"
+    issuer: "www.program.net"
+    token:
+      auth:
+        path: "/v1.0/auth/credential/access"
+      secret: "de tus ojos"
+      expires-in: 3600
+    excluded:
+      path: "/v1.0/version"
